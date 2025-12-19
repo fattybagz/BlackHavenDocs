@@ -15,6 +15,16 @@ a.nav-anchor[href="/overview"] {
     display: none !important;
 }
 
+/* ===== HIDE POWERED BY MINTLIFY ===== */
+[class*="PoweredBy"],
+[class*="powered-by"],
+a[href*="mintlify.com"],
+footer a[href*="mintlify"],
+div[class*="Footer"] a[href*="mintlify"],
+.powered-by-mintlify {
+    display: none !important;
+}
+
 /* ===== CSS VARIABLES ===== */
 :root {
     /* Dark Theme Only */

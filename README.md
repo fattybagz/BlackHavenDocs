@@ -3,7 +3,6 @@
 Official documentation for Blackhaven—the reserve-backed liquidity engine powering sustainable rewards and treasury growth across the MegaETH ecosystem.
 
 ![Blackhaven](https://img.shields.io/badge/Blackhaven-MegaETH-D4FFAF?style=for-the-badge)
-![Mintlify](https://img.shields.io/badge/Built%20with-Mintlify-0D9373?style=for-the-badge)
 
 ## 🌐 Live Documentation
 
