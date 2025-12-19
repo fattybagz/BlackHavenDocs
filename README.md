@@ -39,7 +39,7 @@ Official documentation for Blackhaven—the reserve-backed liquidity engine powe
     └── glossary.mdx
 ```
 
-## � Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -182,7 +182,7 @@ D_{\text{final}} = D_{\text{base}} + \text{Bonus}
 $$
 ```
 
-## � Development
+## 🔧 Development
 
 ### File Naming
 
@@ -203,7 +203,7 @@ icon: "icon-name"
 
 Browse available icons at [Font Awesome](https://fontawesome.com/icons).
 
-## � Deployment
+## 📦 Deployment
 
 The documentation is deployed via Mintlify's hosting. Push changes to `main` branch to trigger automatic deployment.
 
