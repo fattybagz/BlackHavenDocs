@@ -1,0 +1,118 @@
+{
+    "$schema": "https://mintlify.com/schema.json",
+    "name": "Blackhaven",
+    "logo": {
+        "dark": "/logo/DARKMODE.png",
+        "light": "/logo/LIGHTMODE.png"
+    },
+    "favicon": "/favicon.svg",
+    "colors": {
+        "primary": "#D4FFAF",
+        "light": "#D4FFAF",
+        "dark": "#D4FFAF",
+        "background": {
+            "dark": "#0A0C14",
+            "light": "#FFFFFF"
+        },
+        "anchors": {
+            "from": "#D4FFAF",
+            "to": "#D4FFAF"
+        }
+    },
+    "font": {
+        "headings": {
+            "family": "Inter",
+            "weight": 700
+        },
+        "body": {
+            "family": "Inter",
+            "weight": 400
+        }
+    },
+    "topbarLinks": [],
+    "topbarCtaButton": {
+        "name": "Launch App",
+        "url": "https://blackhaven.io"
+    },
+    "anchors": [
+        {
+            "name": "Twitter",
+            "icon": "x-twitter",
+            "url": "https://x.com/blackhaven"
+        },
+        {
+            "name": "Discord",
+            "icon": "discord",
+            "url": "https://discord.gg/3pDXD9ygAV"
+        }
+    ],
+    "navigation": [
+        {
+            "group": "Getting Started",
+            "pages": [
+                "overview"
+            ]
+        },
+        {
+            "group": "RBT Token",
+            "pages": [
+                "rbt/overview",
+                "rbt/notes"
+            ]
+        },
+        {
+            "group": "Products",
+            "pages": [
+                "products/haven-protected-notes",
+                "products/fixed-term-bonds",
+                "products/blackhaven-dex"
+            ]
+        },
+        {
+            "group": "HVN Token",
+            "pages": [
+                "hvn/governance",
+                "hvn/staking",
+                "hvn/proximity",
+                "hvn/bribe-market",
+                "hvn/baseline",
+                "hvn/fees"
+            ]
+        },
+        {
+            "group": "Treasury",
+            "pages": [
+                "treasury/overview",
+                "treasury/bam"
+            ]
+        },
+        {
+            "group": "Resources",
+            "pages": [
+                "resources/risks",
+                "resources/glossary"
+            ]
+        }
+    ],
+    "footerSocials": {
+        "x": "https://x.com/blackhaven",
+        "discord": "https://discord.gg/3pDXD9ygAV"
+    },
+    "modeToggle": {
+        "default": "dark",
+        "isHidden": true
+    },
+    "feedback": {
+        "thumbsRating": true,
+        "suggestEdit": true
+    },
+    "seo": {
+        "indexHiddenPages": false
+    },
+    "metadata": {
+        "og:site_name": "Blackhaven Documentation",
+        "og:description": "The reserve-backed liquidity engine powering sustainable rewards and treasury growth across the MegaETH ecosystem.",
+        "og:image": "/images/og-image.svg",
+        "twitter:site": "@blackhaven"
+    }
+}

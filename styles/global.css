@@ -1,0 +1,378 @@
+/* 
+  Blackhaven Documentation - Dark Mode Only (Simplified)
+  Colors: 
+    - Haven Night (#061235)
+    - Ozone (#D4FFAF) - Primary Accent
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== HIDE DOCUMENTATION TAB ===== */
+/* Mintlify auto-generates this - it's redundant with Overview */
+nav a[href="/overview"].nav-anchor,
+aside a[href="/overview"].nav-anchor,
+a.nav-anchor[href="/overview"] {
+    display: none !important;
+}
+
+/* ===== CSS VARIABLES ===== */
+:root {
+    /* Dark Theme Only */
+    --bh-bg: #0A0C14;
+    --bh-sidebar: #07080D;
+    --bh-text: #F3F4F6;
+    --bh-text-muted: #9CA3AF;
+    --bh-border: #1F2937;
+    --bh-accent: #D4FFAF;
+    --bh-accent-glow: rgba(212, 255, 175, 0.2);
+    --bh-accent-soft: rgba(212, 255, 175, 0.08);
+    --bh-card-bg: #11141D;
+    --bh-table-header: #11141D;
+}
+
+/* Force dark mode */
+html {
+    color-scheme: dark !important;
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    background-color: var(--bh-bg) !important;
+    color: var(--bh-text) !important;
+    font-family: 'Inter', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== MINTLIFY PRIMARY COLOR OVERRIDE ===== */
+:root,
+.dark,
+html.dark,
+[data-theme="dark"] {
+    --primary: #D4FFAF !important;
+    --primary-light: #D4FFAF !important;
+    --primary-dark: #D4FFAF !important;
+}
+
+/* Override all text-primary to green */
+.text-primary,
+[class*="text-primary"] {
+    color: #D4FFAF !important;
+}
+
+/* ===== SIDEBAR STYLING ===== */
+aside,
+nav[class*="Sidebar"],
+div[class*="Sidebar"] {
+    background-color: var(--bh-sidebar) !important;
+    border-right: 1px solid var(--bh-border) !important;
+}
+
+/* ===== SIDEBAR NAVIGATION ===== */
+
+/* Default State - All nav links are muted */
+nav a,
+aside a {
+    color: var(--bh-text-muted) !important;
+    background-color: transparent !important;
+    border-left: 3px solid transparent !important;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Hover State */
+nav a:hover,
+aside a:hover {
+    color: var(--bh-accent) !important;
+    background-color: var(--bh-accent-soft) !important;
+}
+
+/* Active State - Current Page */
+nav a[data-active="true"],
+aside a[data-active="true"],
+nav a.active,
+aside a.active {
+    color: #D4FFAF !important;
+    background-color: rgba(212, 255, 175, 0.08) !important;
+    border-left: 3px solid #D4FFAF !important;
+    font-weight: 600 !important;
+}
+
+/* ===== LAUNCH APP BUTTON ===== */
+a[href*="blackhaven.io"],
+header a[href*="blackhaven.io"] {
+    background: #D4FFAF !important;
+    background-color: #D4FFAF !important;
+    color: #000000 !important;
+    border: none !important;
+    outline: none !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+}
+
+a[href*="blackhaven.io"] *,
+a[href*="blackhaven.io"] span {
+    color: #000000 !important;
+    background: transparent !important;
+}
+
+a[href*="blackhaven.io"]:hover {
+    background: #C5F59E !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(212, 255, 175, 0.4) !important;
+}
+
+/* ===== LOGO STYLING ===== */
+a[href="/"],
+a[href="/"]>* {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+img[alt*="logo" i],
+img[alt*="Blackhaven" i],
+header img {
+    border: none !important;
+    max-width: 180px !important;
+    width: 180px !important;
+    height: auto !important;
+}
+
+/* ===== HEADINGS ===== */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--bh-text) !important;
+    letter-spacing: -0.025em !important;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    background-color: var(--bh-accent);
+    border-radius: 2px;
+    margin-top: 12px;
+}
+
+h2 {
+    border-bottom: 1px solid var(--bh-border) !important;
+}
+
+/* ===== TABLES ===== */
+table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border: 1px solid var(--bh-border) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background-color: var(--bh-card-bg) !important;
+}
+
+th {
+    background-color: var(--bh-table-header) !important;
+    color: var(--bh-text) !important;
+    font-weight: 600 !important;
+    padding: 14px 20px !important;
+    border-bottom: 2px solid var(--bh-border) !important;
+}
+
+td {
+    padding: 16px 20px !important;
+    border-bottom: 1px solid var(--bh-border) !important;
+    background-color: transparent !important;
+    color: var(--bh-text-muted) !important;
+}
+
+tr:hover td {
+    background-color: var(--bh-accent-soft) !important;
+}
+
+/* ===== CARDS ===== */
+.card,
+[class*="Card"],
+a[class*="Card"],
+[class*="CardGroup"] a {
+    background: var(--bh-card-bg) !important;
+    border: 1px solid var(--bh-border) !important;
+    border-radius: 16px !important;
+}
+
+.card:hover,
+[class*="Card"]:hover,
+a[class*="Card"]:hover,
+[class*="CardGroup"] a:hover {
+    border-color: #D4FFAF !important;
+    box-shadow: 0 10px 30px -10px rgba(212, 255, 175, 0.4) !important;
+    transform: translateY(-2px);
+}
+
+/* ===== CALLOUTS ===== */
+.callout,
+[class*="Callout"] {
+    background-color: var(--bh-accent-soft) !important;
+    border: 1px solid var(--bh-border) !important;
+    border-left: 4px solid var(--bh-accent) !important;
+    border-radius: 12px !important;
+    color: var(--bh-text) !important;
+}
+
+/* ===== SEARCH ===== */
+#search-input,
+[class*="Search"] button {
+    background-color: var(--bh-sidebar) !important;
+    border: 1px solid var(--bh-border) !important;
+    color: var(--bh-text) !important;
+}
+
+/* ===== TOPBAR ===== */
+header,
+div[class*="Topbar"] {
+    background-color: var(--bh-bg) !important;
+    border-bottom: 1px solid var(--bh-border) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* ===== CODE ===== */
+code {
+    background-color: var(--bh-sidebar) !important;
+    color: var(--bh-accent) !important;
+    border: 1px solid var(--bh-border) !important;
+}
+
+pre {
+    background-color: #07080D !important;
+    border: 1px solid var(--bh-border) !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    border-top: 1px solid var(--bh-border) !important;
+    padding-top: 2rem !important;
+}
+
+/* ===== IMAGES ===== */
+img {
+    border-radius: 12px !important;
+    border: 1px solid var(--bh-border) !important;
+}
+
+/* ===== ACCORDIONS ===== */
+details,
+[class*="Accordion"] {
+    background: var(--bh-card-bg) !important;
+    border: 1px solid var(--bh-border) !important;
+    border-radius: 12px !important;
+}
+
+summary:hover {
+    background-color: var(--bh-accent-soft) !important;
+}
+
+/* ===== SOCIAL ICONS ===== */
+a[href*="x.com"] svg,
+a[href*="discord"] svg {
+    color: var(--bh-accent) !important;
+    fill: var(--bh-accent) !important;
+}
+
+/* ===== FOCUS STATES ===== */
+nav a:focus-visible,
+aside a:focus-visible {
+    outline: 2px solid var(--bh-accent) !important;
+    outline-offset: -2px;
+    border-radius: 4px;
+}
+
+nav a:focus:not(:focus-visible),
+aside a:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+/* ===== MATH/LATEX FORMULAS ===== */
+.math,
+.katex,
+.katex-display,
+mjx-container,
+.MathJax,
+[class*="math"] {
+    color: var(--bh-accent) !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    max-width: 100% !important;
+}
+
+.katex-display,
+mjx-container[display="true"],
+.MathJax_Display {
+    overflow: visible !important;
+    padding: 0.5rem 0 !important;
+}
+
+.katex .base,
+mjx-math,
+.MathJax span {
+    color: var(--bh-accent) !important;
+}
+
+/* Remove scrollbar from math containers */
+.katex-html,
+mjx-container,
+.MathJax {
+    overflow: visible !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.katex-html::-webkit-scrollbar,
+mjx-container::-webkit-scrollbar,
+.MathJax::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== STYLED FRAME CONTAINER ===== */
+[class*="Frame"],
+.frame,
+figure {
+    background: linear-gradient(135deg, rgba(212, 255, 175, 0.03) 0%, rgba(6, 18, 53, 0.4) 100%) !important;
+    border: 1px solid rgba(212, 255, 175, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
+    backdrop-filter: blur(8px);
+}
+
+[class*="Frame"]:hover,
+.frame:hover,
+figure:hover {
+    border-color: rgba(212, 255, 175, 0.35) !important;
+    box-shadow: 0 0 20px rgba(212, 255, 175, 0.08) !important;
+}
+
+/* ===== FORMULA BOX ===== */
+.formula-box {
+    background: linear-gradient(135deg, rgba(212, 255, 175, 0.04) 0%, rgba(6, 18, 53, 0.5) 100%);
+    border: 1px solid rgba(212, 255, 175, 0.25);
+    border-left: 3px solid var(--bh-accent);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.formula-box ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.formula-box li {
+    margin: 0.25rem 0;
+    line-height: 1.6;
+}
+
+.formula-box strong {
+    color: var(--bh-accent);
+}

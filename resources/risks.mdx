@@ -1,0 +1,54 @@
+---
+title: "Risks"
+icon: "triangle-exclamation"
+---
+
+<Warning>
+This section outlines the main risks associated with Blackhaven and how we address them.
+</Warning>
+
+This section will discuss the following risks:
+
+1. Smart Contract Risk
+2. RBT Backing Risk
+3. Treasury Strategy Risk
+4. Oracle Risk
+
+All community feedback is welcome and we are committed to continuously improving our risk management framework. If you believe any risk has not been adequately surfaced, please reach out to our contributors.
+
+## Smart Contract Risk
+
+Like all DeFi protocols, Blackhaven is built on a series of smart contracts. While these contracts are designed to be robust and secure, there is always a risk of vulnerabilities, bugs, or exploits that could be used to compromise the protocol, resulting in a partial or total loss of user funds.
+
+**Mitigation:**
+
+- **Audits:** The entire Blackhaven codebase will undergo multiple comprehensive audits from reputable, independent security firms before launch. All audit reports will be made public.
+- **Bug Bounty Program:** A bug bounty program will be established to incentivize white-hat hackers and security researchers to find and report vulnerabilities in a responsible manner.
+- **Time-Locked Contracts:** Key administrative functions and contract upgrades will be subject to a time-lock, providing users with a window to exit the protocol if they do not agree with a proposed change.
+
+## RBT Backing Risk
+
+RBT is a reserve-backed token. Its value is supported by the assets held in the Blackhaven treasury. While the protocol ensures that RBT is always backed by at least 1:1 with approved assets via DAO governance, market dynamics could cause the trading price of RBT to fall below its backing value for periods of time.
+
+**Mitigation:**
+
+- **Verifiable On-Chain Reserves:** The Blackhaven treasury is fully transparent and verifiable on-chain at all times. Users can always see the exact assets backing RBT.
+- **Protocol-Owned Liquidity (POL):** Through the bonding mechanism, Blackhaven builds a deep, permanent base of liquidity for the RBT-USDM pool. This POL helps to absorb sell pressure and stabilize the price.
+- **Premium Capture Module (PCM):** While the PCM is designed to capture value when RBT trades above its backing, the treasury can also use its reserves to buy back RBT from the open market if it trades significantly below its backing, providing a natural source of buy pressure.
+
+## Treasury Strategy Risk
+
+The yield generated for HPN depositors is derived from deploying the treasury's capital into whitelisted DeFi strategies on MegaETH. These strategies are not risk-free. They are subject to the smart contract risks of the underlying protocols, potential underperformance, or negative yield scenarios in extreme market conditions.
+
+**Mitigation:**
+
+- **Conservative Whitelisting:** Only established, audited, and well-understood protocols will be whitelisted as approved strategies for treasury deployment. The bar for inclusion will be extremely high.
+- **Diversification:** The treasury will diversify its deployments across multiple strategies and protocols to avoid over-exposure to any single point of failure.
+
+## Oracle Risk
+
+The protocol may rely on oracles to provide pricing data for the assets held in the treasury. If these oracles are manipulated or provide inaccurate data, it could lead to incorrect calculations of RBT's backing or other protocol functions.
+
+**Mitigation:**
+
+- **Multiple Oracle Providers:** For critical functions, the protocol may use multiple oracle providers as a redundancy measure.
